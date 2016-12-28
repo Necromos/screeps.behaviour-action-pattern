@@ -47,6 +47,9 @@ action.step = function(creep){
 };
 action.work = function(creep){
     var workResult;
+
+    creep.signController(creep.target, CONTROLLER_SIGN);
+
     if( creep.target.owner && !creep.target.my ){
         workResult = creep.attackController(creep.target);
     }

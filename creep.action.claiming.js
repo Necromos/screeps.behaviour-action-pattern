@@ -51,6 +51,8 @@ action.step = function(creep){
     creep.drive( creep.target.pos, this.reachedRange, this.targetRange, range );
 };
 action.work = function(creep){
+    creep.signController(creep.target, CONTROLLER_SIGN);
+
     return creep.claimController(creep.target)
     /*
     var workResult;
